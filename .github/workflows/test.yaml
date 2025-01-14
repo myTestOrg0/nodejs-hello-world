@@ -1,0 +1,25 @@
+name: Check yarn.lock
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-lockfile:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  
+          
+      - name: Install lockfile-lint
+        run: npm install -g lockfile-lint
+
+      - name: Run lockfile-lint
+        run: lockfile-lint --path yarn.lock --allowed-hosts yarn npm 
