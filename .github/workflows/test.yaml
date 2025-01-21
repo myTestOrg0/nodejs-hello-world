@@ -24,6 +24,6 @@ jobs:
       - name: Run lockfile-lint
         run: lockfile-lint --path yarn.lock --allowed-hosts yarn npm 
       - name: Check checkout action
-        run: cat .git/config
+        run: git checkout -b new-branch
   use-hello-world:
     uses: myTestOrg0/hello-world-python-package/.github/workflows/hello-world-reusable-workflow.yml@1054e2ce6cd13963831a766008754d03ef285a54
