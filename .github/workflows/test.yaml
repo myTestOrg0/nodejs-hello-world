@@ -23,3 +23,5 @@ jobs:
 
       - name: Run lockfile-lint
         run: lockfile-lint --path yarn.lock --allowed-hosts yarn npm 
+  use-hello-world:
+    uses: myTestOrg0/hello-world-python-package/.github/workflows/hello-world-reusable-workflow.yml@main
