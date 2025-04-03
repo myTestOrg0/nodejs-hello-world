@@ -7,6 +7,7 @@ on:
 
 jobs:
   check-lockfile:
+    environment: test
     runs-on: ubuntu-latest
     
     steps:
