@@ -3,7 +3,7 @@ name: Check yarn.lock
 on:
   push:
     branches:
-      - main
+      - test
 
 jobs:
   check-lockfile:
